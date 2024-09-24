@@ -10,7 +10,7 @@ export default function Home() {
   const [subjects, setSubjects] = useState<Subject[]>([]);
 
   useEffect(() => {
-    axios.get('https://e-tap-learning.vercel.app/api/subjects')
+    axios.get('https://etaplearningapi.onrender.com/api/subjects')
       .then(res => setSubjects(res.data))
       .catch(err => console.error(err));
   }, []);

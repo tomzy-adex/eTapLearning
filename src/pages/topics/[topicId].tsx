@@ -16,7 +16,7 @@ export default function TopicDetails() {
 
   useEffect(() => {
     if (topicId) {
-      axios.get(`https://e-tap-learning.vercel.app/api/topics/${topicId}`)
+      axios.get(`https://etaplearningapi.onrender.com/api/topics/${topicId}`)
         .then((res) => setTopic(res.data))
         .catch((err) => console.error(err));
     }

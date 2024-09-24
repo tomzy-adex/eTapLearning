@@ -22,7 +22,7 @@ const Topics: React.FC = () => {
     const fetchTopics = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`https://e-tap-learning.vercel.app/api/topics/${subjectId}/topics`);
+        const response = await fetch(`https://etaplearningapi.onrender.com/api/topics/${subjectId}/topics`);
         if (!response.ok) {
           throw new Error('Failed to fetch topics');
         }
@@ -40,7 +40,7 @@ const Topics: React.FC = () => {
   const handleAddTopic = async (newTopic: FormData) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://e-tap-learning.vercel.app/api/topics/${subjectId}/addTopicWithUploader`, {
+      const response = await fetch(`https://etaplearningapi.onrender.com/api/topics/${subjectId}/addTopicWithUploader`, {
         method: 'POST',
         body: newTopic, // Send form data directly (no JSON.stringify)
       });

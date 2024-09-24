@@ -16,7 +16,7 @@ const Subjects: React.FC = () => {
     const fetchSubjects = async () => {
       setLoading(true);
       try {
-        const response = await fetch('https://e-tap-learning.vercel.app/api/subjects/getAllSubjects');
+        const response = await fetch('https://etaplearningapi.onrender.com/api/subjects/getAllSubjects');
         if (!response.ok) {
           throw new Error('Failed to fetch subjects');
         }
@@ -34,7 +34,7 @@ const Subjects: React.FC = () => {
   const handleAddSubject = async (newSubject: Subject) => {
     setLoading(true);
     try {
-      const response = await fetch('https://e-tap-learning.vercel.app/api/subjects/addSubject', {
+      const response = await fetch('https://etaplearningapi.onrender.com/api/subjects/addSubject', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

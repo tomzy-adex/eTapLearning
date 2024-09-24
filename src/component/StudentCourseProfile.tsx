@@ -18,7 +18,7 @@ const StudentCourseProfile: React.FC<AddSubjectModalProps> = ({
       setLoading(true);
       try {
         const response = await fetch(
-          `https://e-tap-learning.vercel.app/api/topics/${learnerDetails?.id}/users`
+          `https://etaplearningapi.onrender.com/api/topics/${learnerDetails?.id}/users`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch subjects");

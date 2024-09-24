@@ -28,7 +28,7 @@ const AssignSubjectModal: React.FC<AssignSubjectModalProps> = ({
       setLoading(true);
       try {
         const response = await fetch(
-          `https://e-tap-learning.vercel.app/api/subjects/${learner_id}`
+          `https://etaplearningapi.onrender.com/api/subjects/${learner_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch subjects");
@@ -77,7 +77,7 @@ const AssignSubjectModal: React.FC<AssignSubjectModalProps> = ({
         learner_id: learner_id
     }
     try {
-      const response = await fetch('https://e-tap-learning.vercel.app/api/topics/assignLessonToUser', {
+      const response = await fetch('https://etaplearningapi.onrender.com/api/topics/assignLessonToUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
