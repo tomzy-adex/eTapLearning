@@ -25,7 +25,7 @@ const Students: React.FC = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "http://localhost:4000/api/students/getAllStudents"
+          "https://e-tap-learning.vercel.app/api/students/getAllStudents"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch students");
@@ -49,7 +49,7 @@ const Students: React.FC = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:4000/api/students/addStudent",
+        "https://e-tap-learning.vercel.app/api/students/addStudent",
         {
           method: "POST",
           headers: {

@@ -18,7 +18,7 @@ const AssignSubjectModal: React.FC<AssignSubjectModalProps> = ({
       setLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:4000/api/subjects/${learner_id}`
+          `https://e-tap-learning.vercel.app/api/subjects/${learner_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch subjects");
